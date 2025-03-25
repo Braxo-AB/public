@@ -13,9 +13,6 @@ sub before_dlr {
                 mnc => substr($mccmnc, 3),
         );
 
-        my $imsi = $dlrinfo->{'0x1403'};
-        $info{imsi} = $imsi if (defined($imsi));
-
         $response->{dlrinfo} = \%info;
 
         return 0;
